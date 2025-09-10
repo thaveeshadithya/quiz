@@ -6,9 +6,9 @@ interface TimerProps {
     total: number;
 }
 
-const Timer: React.FC<TimerProps> = ({ timeLeft, total }) => {
+const Timer: React.FC<TimerProps> = ({ timeLeft, total: _total  }) => {
     const radius = 40;
-    const circumference = 2 * Math.PI * radius;
+    
 
     return (
         <StyledTimer timeLeft={timeLeft}>

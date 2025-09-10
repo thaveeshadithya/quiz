@@ -1,5 +1,5 @@
 
-import { Container, Title, Footer, FooterText, FooterLogo } from './components/StyledComponents';
+import { Container, Footer, FooterText, FooterLogo } from './components/StyledComponents';
 import CircuitBackground from './components/CircuitBackground';
 import Quiz from './components/Quiz';
 import { questions } from './questions';
