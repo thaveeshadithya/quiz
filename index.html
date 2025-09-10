@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Welcome to the Quiz Game</h1>
+            <button id="start-button">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div id="question-container">
+                <h2 id="question">Question will appear here</h2>
+                <div id="answers">
+                    <button class="answer-button">Answer 1</button>
+                    <button class="answer-button">Answer 2</button>
+                    <button class="answer-button">Answer 3</button>
+                    <button class="answer-button">Answer 4</button>
+                </div>
+            </div>
+            <div id="timer">
+                <div class="circle">
+                    <svg>
+                        <circle cx="50" cy="50" r="40" class="circle-progress"></circle>
+                    </svg>
+                </div>
+                <span>10</span>
+            </div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h1>Quiz Results</h1>
+            <p id="score">Your score: 0</p>
+            <div id="review"></div>
+            <button id="restart-button">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
