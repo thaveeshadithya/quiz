@@ -15,6 +15,7 @@ export const questions: Question[] = [
   },
   {
     id: 2,
+ 
     question: "What is the SI unit of inductance?",
     answers: [
       "Farad",
@@ -27,6 +28,7 @@ export const questions: Question[] = [
   },
   {
     id: 3,
+   
     question: "Which device is used to convert AC to DC?",
     answers: [
       "Rectifier",
@@ -39,6 +41,7 @@ export const questions: Question[] = [
   },
   {
     id: 4,
+
     question: "Which of the following is a passive component?",
     answers: [
       "Transistor",
@@ -51,6 +54,7 @@ export const questions: Question[] = [
   },
   {
     id: 5,
+
     question: "What is the main function of a transformer?",
     answers: [
       "Rectification",
@@ -63,6 +67,7 @@ export const questions: Question[] = [
   },
   {
     id: 6,
+
     question: "Which material is commonly used as a semiconductor?",
     answers: [
       "Copper",
@@ -75,6 +80,7 @@ export const questions: Question[] = [
   },
   {
     id: 7,
+
     question: "Which instrument is used to measure electric current?",
     answers: [
       "Voltmeter",
@@ -87,6 +93,7 @@ export const questions: Question[] = [
   },
   {
     id: 8,
+
     question: "What is the function of a Zener diode?",
     answers: [
       "Rectification",
@@ -99,6 +106,7 @@ export const questions: Question[] = [
   },
   {
     id: 9,
+
     question: "Which of the following is NOT a type of electrical machine?",
     answers: [
       "Transformer",
@@ -111,6 +119,7 @@ export const questions: Question[] = [
   },
   {
     id: 10,
+    
     question: "Which logic gate outputs HIGH only when all its inputs are LOW?",
     answers: [
       "NAND",
@@ -123,6 +132,7 @@ export const questions: Question[] = [
   },
   {
     id: 11,
+ 
     question: "What is the main function of an operational amplifier in a circuit?",
     answers: [
       "Current amplification",
@@ -135,6 +145,7 @@ export const questions: Question[] = [
   },
   {
     id: 12,
+    
     question: "Which device is used as a voltage-controlled switch?",
     answers: [
       "Bipolar Junction Transistor (BJT)",
@@ -147,6 +158,7 @@ export const questions: Question[] = [
   },
   {
     id: 13,
+    
     question: "What is the unit of electrical capacitance?",
     answers: [
       "Henry",
@@ -159,6 +171,7 @@ export const questions: Question[] = [
   },
   {
     id: 14,
+    
     question: "Which of the following is NOT a type of analog-to-digital converter (ADC)?",
     answers: [
       "Successive Approximation",
@@ -171,6 +184,7 @@ export const questions: Question[] = [
   },
   {
     id: 15,
+    
     question: "Which law is used to determine the direction of induced current?",
     answers: [
       "Ohm's Law",
@@ -183,6 +197,7 @@ export const questions: Question[] = [
   },
   {
     id: 16,
+   
     question: "Which instrument is used to measure resistance?",
     answers: [
       "Ammeter",
@@ -195,6 +210,7 @@ export const questions: Question[] = [
   },
   {
     id: 17,
+
     question: "What is the function of a capacitor in an AC circuit?",
     answers: [
       "Store charge",
@@ -207,6 +223,7 @@ export const questions: Question[] = [
   },
   {
     id: 18,
+    
     question: "Which of the following is a unidirectional device?",
     answers: [
       "Resistor",
@@ -219,6 +236,7 @@ export const questions: Question[] = [
   },
   {
     id: 19,
+
     question: "Which of the following is used for power factor improvement?",
     answers: [
       "Inductor",
@@ -231,6 +249,7 @@ export const questions: Question[] = [
   },
   {
     id: 20,
+
     question: "Which device is used to store electrical energy?",
     answers: [
       "Resistor",
@@ -243,6 +262,7 @@ export const questions: Question[] = [
   },
   {
     id: 21,
+   
     question: "Which of the following is a non-linear device?",
     answers: [
       "Resistor",
@@ -255,6 +275,7 @@ export const questions: Question[] = [
   },
   {
     id: 22,
+
     question: "What is the function of a relay?",
     answers: [
       "Amplification",
@@ -267,6 +288,7 @@ export const questions: Question[] = [
   },
   {
     id: 23,
+
     question: "Which of the following is NOT a type of transformer?",
     answers: [
       "Step-up",
@@ -279,6 +301,7 @@ export const questions: Question[] = [
   },
   {
     id: 24,
+
     question: "Which device is used to protect circuits from overcurrent?",
     answers: [
       "Resistor",
@@ -291,6 +314,7 @@ export const questions: Question[] = [
   },
   {
     id: 25,
+
     question: "Which of the following is a digital circuit?",
     answers: [
       "Amplifier",
@@ -303,6 +327,7 @@ export const questions: Question[] = [
   },
   {
     id: 26,
+  
     question: "Which of the following is NOT a type of diode?",
     answers: [
       "Zener",
@@ -315,6 +340,7 @@ export const questions: Question[] = [
   },
   {
     id: 27,
+
     question: "Which device is used to amplify weak signals?",
     answers: [
       "Resistor",
@@ -327,6 +353,7 @@ export const questions: Question[] = [
   },
   {
     id: 28,
+
     question: "Which of the following is a type of filter?",
     answers: [
       "Low-pass",
@@ -339,6 +366,7 @@ export const questions: Question[] = [
   },
   {
     id: 29,
+
     question: "Which device is used to convert light into electricity?",
     answers: [
       "LED",
@@ -351,6 +379,7 @@ export const questions: Question[] = [
   },
   {
     id: 30,
+
     question: "Which of the following is NOT a type of motor?",
     answers: [
       "DC Motor",
@@ -363,6 +392,7 @@ export const questions: Question[] = [
   },
   {
     id: 31,
+
     question: "Which device is used to measure frequency?",
     answers: [
       "Voltmeter",
@@ -375,6 +405,7 @@ export const questions: Question[] = [
   },
   {
     id: 32,
+   
     question: "Which of the following is a type of sensor?",
     answers: [
       "Thermistor",
@@ -387,6 +418,7 @@ export const questions: Question[] = [
   },
   {
     id: 33,
+
     question: "Which device is used to convert DC to AC?",
     answers: [
       "Rectifier",
@@ -399,6 +431,7 @@ export const questions: Question[] = [
   },
   {
     id: 34,
+
     question: "Which of the following is NOT a type of sensor?",
     answers: [
       "Thermistor",
@@ -411,6 +444,7 @@ export const questions: Question[] = [
   },
   {
     id: 35,
+   
     question: "Which device is used to store magnetic energy?",
     answers: [
       "Resistor",
@@ -423,6 +457,7 @@ export const questions: Question[] = [
   },
   {
     id: 36,
+
     question: "Which of the following is a type of oscillator?",
     answers: [
       "RC Oscillator",
@@ -435,6 +470,7 @@ export const questions: Question[] = [
   },
   {
     id: 37,
+
     question: "Which device is used to measure power?",
     answers: [
       "Voltmeter",
@@ -447,6 +483,7 @@ export const questions: Question[] = [
   },
   {
     id: 38,
+  
     question: "Which of the following is NOT a type of rectifier?",
     answers: [
       "Half-wave",
@@ -459,6 +496,7 @@ export const questions: Question[] = [
   },
   {
     id: 39,
+
     question: "Which device is used to measure temperature?",
     answers: [
       "Thermistor",
@@ -471,6 +509,7 @@ export const questions: Question[] = [
   },
   {
     id: 40,
+
     question: "Which of the following is a type of amplifier?",
     answers: [
       "Voltage amplifier",
@@ -495,6 +534,7 @@ export const questions: Question[] = [
   },
   {
     id: 42,
+
     question: "Which of the following is NOT a type of filter?",
     answers: [
       "Low-pass",
