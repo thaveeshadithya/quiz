@@ -198,7 +198,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
                                         },
                                     }}
                                 >
-                                    indSpark
+                                    MindSpark
                                 </motion.h1>
                 <div style={{
                     fontSize: '1.7rem',
