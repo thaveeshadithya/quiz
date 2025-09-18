@@ -3,6 +3,7 @@ export interface Question {
     question: string;
     answers: string[];
     correctAnswer: number;
+    group: string; // new property to indicate the question group
 }
 
 export interface QuizState {

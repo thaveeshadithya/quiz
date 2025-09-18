@@ -20,8 +20,22 @@ interface QuizProps {
 
 
 const getRandomQuestions = (allQuestions: Question[], count: number) => {
-    const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
+    // Group questions by their 'group' property
+    const groups: { [key: string]: Question[] } = {};
+    allQuestions.forEach(q => {
+        if (!groups[q.group]) groups[q.group] = [];
+        groups[q.group].push(q);
+    });
+    // Select one random question from each group
+    const selected: Question[] = [];
+    Object.keys(groups).forEach(groupName => {
+        const groupQuestions = groups[groupName];
+        if (groupQuestions.length > 0) {
+            const randomIndex = Math.floor(Math.random() * groupQuestions.length);
+            selected.push(groupQuestions[randomIndex]);
+        }
+    });
+    return selected.slice(0, count);
 };
 
 const Quiz: React.FC<QuizProps> = ({ questions }) => {
@@ -184,7 +198,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
                                         },
                                     }}
                                 >
-                                    MindSpark
+                                    indSpark
                                 </motion.h1>
                 <div style={{
                     fontSize: '1.7rem',
