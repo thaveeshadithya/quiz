@@ -42,7 +42,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
     const [started, setStarted] = useState(false);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(10);
+    const [timeLeft, setTimeLeft] = useState(15);
     const [isAnswered, setIsAnswered] = useState(false);
     const [showResult, setShowResult] = useState(false);
     const [userAnswers, setUserAnswers] = useState<{answer: number|null, correct: boolean}[]>([]);
@@ -111,7 +111,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
         if (currentQuestionIndex < quizQuestions.length - 1) {
             setCurrentQuestionIndex((i) => i + 1);
             setIsAnswered(false);
-            setTimeLeft(10);
+            setTimeLeft(15);
         } else {
             setShowResult(true);
         }
@@ -133,7 +133,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
         setStarted(false);
         setCurrentQuestionIndex(0);
         setScore(0);
-        setTimeLeft(10);
+        setTimeLeft(15);
         setIsAnswered(false);
         setShowResult(false);
         setUserAnswers([]);
@@ -145,7 +145,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
         setStarted(true);
         setCurrentQuestionIndex(0);
         setScore(0);
-        setTimeLeft(10);
+        setTimeLeft(15);
         setIsAnswered(false);
         setShowResult(false);
         setUserAnswers([]);
@@ -210,7 +210,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
                     maxWidth: 420,
                     margin: '0 auto 2.2rem auto',
                 }}>
-                  <div>You have <b>5 questions</b>.<br />Each question has <b>10 seconds</b>.</div>
+                  <div>You have <b>5 questions</b>.<br />Each question has <b>15 seconds</b>.</div>
                 </div>
                 <div style={{ width: '100%' }}>
                   <Button
@@ -290,7 +290,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
             key={currentQuestionIndex}
         >
             <div ref={timerRef}>
-                <Timer timeLeft={timeLeft} total={10} />
+                <Timer timeLeft={timeLeft} total={15} />
             </div>
             <ProgressBar style={{ boxShadow: '0 2px 8px #6366f133', height: 10 }}>
                 <Progress 
