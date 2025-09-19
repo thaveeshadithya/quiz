@@ -308,6 +308,9 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
                 style={{ fontSize: '1.5rem', lineHeight: 1.4 }}
             >
                 {currentQuestion.question}
+                <div style={{ fontSize: '1.4rem', marginTop: '0.5rem', color: '#333' }}>
+                    {currentQuestion.sinhalaQuestion}
+                </div>
             </QuestionText>
             <AnswerGrid>
                 <AnimatePresence>
