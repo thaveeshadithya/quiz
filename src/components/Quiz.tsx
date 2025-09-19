@@ -36,7 +36,7 @@ const getRandomQuestions = (allQuestions: Question[], count: number) => {
             selected.push(groupQuestions[randomIndex]);
         }
     });
-    
+
     // Ensure only 5 questions are returned (one per group)
     return selected.slice(0, count);
 };
