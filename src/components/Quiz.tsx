@@ -330,6 +330,8 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
                                     ? '#6366f1'
                                     : undefined,
                                 transition: 'all 0.25s cubic-bezier(.4,2,.6,1)',
+                                justifyContent: 'flex-start',
+                                textAlign: 'left',
                             }}
                         >
                             <span className="answer-letter" style={{
