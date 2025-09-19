@@ -305,7 +305,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
             <QuestionText
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                style={{ fontSize: '2.2rem', lineHeight: 1.4 }}
+                style={{ fontSize: '1.8rem', lineHeight: 1.4 }}
             >
                 {currentQuestion.question}
             </QuestionText>
