@@ -26,6 +26,7 @@ const getRandomQuestions = (allQuestions: Question[], count: number) => {
         if (!groups[q.group]) groups[q.group] = [];
         groups[q.group].push(q);
     });
+
     // Select one random question from each group
     const selected: Question[] = [];
     Object.keys(groups).forEach(groupName => {
@@ -35,6 +36,8 @@ const getRandomQuestions = (allQuestions: Question[], count: number) => {
             selected.push(groupQuestions[randomIndex]);
         }
     });
+
+    // Ensure only 5 questions are returned (one per group)
     return selected.slice(0, count);
 };
 
