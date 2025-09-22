@@ -20,24 +20,20 @@ interface QuizProps {
 
 
 const getRandomQuestions = (allQuestions: Question[], count: number) => {
-    // Group questions by their 'group' property
-    const groups: { [key: string]: Question[] } = {};
-    allQuestions.forEach(q => {
-        if (!groups[q.group]) groups[q.group] = [];
-        groups[q.group].push(q);
-    });
+    // Define group order
+    const groupOrder = ['group1', 'group2', 'group3', 'group4', 'group5'];
 
-    // Select one random question from each group
     const selected: Question[] = [];
-    Object.keys(groups).forEach(groupName => {
-        const groupQuestions = groups[groupName];
+
+    groupOrder.forEach(groupName => {
+        const groupQuestions = allQuestions.filter(q => q.group === groupName);
         if (groupQuestions.length > 0) {
             const randomIndex = Math.floor(Math.random() * groupQuestions.length);
             selected.push(groupQuestions[randomIndex]);
         }
     });
 
-    // Ensure only 5 questions are returned (one per group)
+    // Ensure only `count` questions are returned
     return selected.slice(0, count);
 };
 
