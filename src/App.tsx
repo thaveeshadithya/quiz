@@ -4,24 +4,22 @@ import Quiz from './components/Quiz';
 import { questions } from './questions';
 import DEEELogo from './assets/DEEE Logo with WHITE text- (1).png';
 import EEESLogo from './assets/EEES Logo White-02.png';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
     <>
       <Container>
         <CircuitBackground />
-        <AnimatePresence mode="wait">
-          <motion.div
-            key="quiz-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Quiz questions={questions} />
-          </motion.div>
-        </AnimatePresence>
+        <motion.div
+          key="quiz-container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Quiz questions={questions} />
+        </motion.div>
       </Container>
       <Footer>
   <FooterLogo src={DEEELogo} alt="Department Logo" style={{ height: '40px', width: 'auto', marginLeft: '0.001vw' }} />
