@@ -313,43 +313,64 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
             </QuestionText>
             <AnswerGrid>
                 <AnimatePresence>
-                    {currentQuestion.answers.map((answer, index) => (
-                        <AnswerButton
-                            key={answer}
-                            onClick={() => handleAnswer(index)}
-                            disabled={isAnswered}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            whileHover={{ scale: 1.06, backgroundColor: 'rgba(99,102,241,0.08)' }}
-                            whileTap={{ scale: 0.97 }}
-                            style={{
-                                // Only highlight selected answer, not correct/wrong
-                                background: isAnswered && index === userAnswers[currentQuestionIndex]?.answer
-                                    ? 'rgba(99,102,241,0.08)'
-                                    : undefined,
-                                borderColor: isAnswered && index === userAnswers[currentQuestionIndex]?.answer
-                                    ? '#6366f1'
-                                    : undefined,
-                                transition: 'all 0.25s cubic-bezier(.4,2,.6,1)',
-                                justifyContent: 'flex-start',
-                                textAlign: 'left',
-                            }}
-                        >
-                            <span className="answer-letter" style={{
-                                background: isAnswered && index === userAnswers[currentQuestionIndex]?.answer
-                                    ? 'rgba(99,102,241,0.08)'
-                                    : undefined,
-                                color: isAnswered && index === userAnswers[currentQuestionIndex]?.answer
-                                    ? '#6366f1'
-                                    : undefined,
-                                transition: 'all 0.25s cubic-bezier(.4,2,.6,1)',
-                            }}>
-                                {String.fromCharCode(65 + index)}
-                            </span>
-                            {answer}
-                        </AnswerButton>
-                    ))}
+                    {currentQuestion.answers.map((answer, index) => {
+                        // Determine styles based on answer correctness and selection
+                        let background;
+                        let borderColor;
+                        let color;
+                        if (isAnswered) {
+                            const correctIndex = currentQuestion.correctAnswer;
+                            const userAnswer = userAnswers[currentQuestionIndex]?.answer;
+                            if (index === correctIndex) {
+                                background = '#d1fae5'; // green background for correct answer
+                                borderColor = '#10b981';
+                                color = '#10b981';
+                            } else if (index === userAnswer && userAnswer !== correctIndex) {
+                                background = '#fee2e2'; // red background for wrong selected answer
+                                borderColor = '#ef4444';
+                                color = '#ef4444';
+                            } else if (index === userAnswer) {
+                                // If selected answer is correct, already handled above
+                                background = undefined;
+                                borderColor = undefined;
+                                color = undefined;
+                            }
+                        } else if (isAnswered && index === userAnswers[currentQuestionIndex]?.answer) {
+                            background = 'rgba(99,102,241,0.08)';
+                            borderColor = '#6366f1';
+                            color = '#6366f1';
+                        }
+                        return (
+                            <AnswerButton
+                                key={answer}
+                                onClick={() => handleAnswer(index)}
+                                disabled={isAnswered}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                whileHover={{ scale: 1.06, backgroundColor: 'rgba(99,102,241,0.08)' }}
+                                whileTap={{ scale: 0.97 }}
+                                style={{
+                                    background,
+                                    borderColor,
+                                    transition: 'all 0.25s cubic-bezier(.4,2,.6,1)',
+                                    justifyContent: 'flex-start',
+                                    textAlign: 'left',
+                                }}
+                            >
+                                <span className="answer-letter" style={{
+                                    background: (background === undefined && isAnswered && index === userAnswers[currentQuestionIndex]?.answer)
+                                        ? 'rgba(99,102,241,0.08)'
+                                        : undefined,
+                                    color,
+                                    transition: 'all 0.25s cubic-bezier(.4,2,.6,1)',
+                                }}>
+                                    {String.fromCharCode(65 + index)}
+                                </span>
+                                {answer}
+                            </AnswerButton>
+                        );
+                    })}
                 </AnimatePresence>
             </AnswerGrid>
         </QuizCard>
